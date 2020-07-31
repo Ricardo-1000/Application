@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Room_Type</h1>
+{% for item in rooms_type_list_view %}
+
+{{ item.name }}
+{{ item.bed_count }}
+{{ item.bed_type }}
+{{ item.bathroom_count }}
+{{ item.bathroom_type }}
+{{ item.property }}
+{% if item.icon_image %}
+<img src="{{ MEDIA_URL }}{{ item.icon_image }}">
+{% endif %}
+<br><hr>
+{% endfor %}
+</body>
+</html>

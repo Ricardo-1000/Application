@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<h1>Pagina de proprietati</h1>
+{% for item in property_list_view %}
+
+{{ item.name }}
+{{ item.description }}
+{% if item.image %}
+<img src="{{ MEDIA_URL }}{{ item.image }}">
+{% endif %}
+{{ item.user_id }}
+{{ item.created }}
+{{ item.status }}
+
+
+{% endfor %}
+</body>
+</html>

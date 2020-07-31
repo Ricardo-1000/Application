@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Pagina de Booking</h1>
+{% for item in booking_view %}
+
+{{ item.room_id }}
+{{ item.user }}
+{{ item.adults }}
+{{ item.childrens }}
+{{ item.check_in_date }}
+{{ item.check_out_date }}
+{{ item.email }}
+{{ item.phone }}
+
+
+{% endfor %}
+</body>
+</html>

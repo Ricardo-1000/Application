@@ -1,0 +1,22 @@
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Address</h1>
+{% for item in address_view %}
+
+{{ item.country }}
+{{ item.state }}
+{{ item.city }}
+{{ item.street }}
+{{ item.street_no }}
+{{ item.details }}
+
+
+{% endfor %}
+</body>
+</html>

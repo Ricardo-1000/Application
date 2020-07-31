@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Pagina de camere</h1>
+{% for item in room_list_view %}
+
+{{ item.name }}
+{{ item.price }}
+{{ item.status }}
+
+{% endfor %}
+</body>
+</html>
