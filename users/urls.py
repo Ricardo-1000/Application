@@ -5,7 +5,7 @@ from users.views import register
 from users.views import profile
 from users.views import upload
 from users.views import profile_email
-from django.contrib.auth import views as auth_views
+
 
 
 app_name = 'users'
@@ -17,8 +17,4 @@ urlpatterns = [
     path('profile/email', view=profile_email, name='profile_email'),
     path('register/', view=register, name='register'),
     path('upload/', view=upload, name='upload'),
-    path('password_reset/', auth_views.PasswordResetView.as_view(), name='password_reset'),
-    path('password_reset_done/', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'),
-    path('password_reset_confirm/', auth_views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
-    path('password_reset_complete/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
 ]

@@ -9,7 +9,6 @@ from django.dispatch import Signal
 def inactivate_user(user, *args, **kwargs):
     if not user.pk:
         user.is_active = False
-        pass
 
 
 set_inactive_user = Signal(providing_args=['user'])

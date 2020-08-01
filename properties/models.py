@@ -60,7 +60,7 @@ class Reviews(models.Model):
     review = models.CharField(max_length=5, null=False, choices=REVIEW)
     comment = models.CharField(max_length=255)
     property = models.OneToOneField(Property, null=True, on_delete=models.CASCADE)
-    user_id = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
+    user_id = models.OneToOneField(settings.AUTH_USER_MODEL, null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.property.name
