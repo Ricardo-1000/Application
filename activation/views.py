@@ -9,12 +9,12 @@ from django.conf import settings
 
 app_name = 'activation'
 
+
 def activate(request, token):
     activation = get_object_or_404(Activation, token=token)
 
     if activation.user.is_active:
         raise Http404
-
 
     if activation.expires_at < timezone.now():
         if request.GET.get('resend'):
@@ -39,10 +39,6 @@ def activate(request, token):
             password = form.cleaned_data['password']
 
             authenticated_user = authenticate(request, username=email, password=password)
-            print('************************')
-            print('************************')
-            print('************************')
-            print('************************')
             print('settings.DJANGO_AUTH_BACKEND', settings.DJANGO_AUTH_BACKEND)
             login(request, authenticated_user, backend=settings.DJANGO_AUTH_BACKEND, )
 

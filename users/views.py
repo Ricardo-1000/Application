@@ -1,13 +1,16 @@
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
-from django.shortcuts import render, reverse
+from django.shortcuts import render, reverse, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect
 from django.template.loader import get_template
 from users.forms import LoginForm, UploadFileForm, UploadProfileImage
 from users.admin import MyUserCreationForm
 from helpers.upload import handle_upload_file
+from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib import messages
+from django.contrib.auth import update_session_auth_hash
 
 
 def handle_login(request):

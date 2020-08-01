@@ -1,13 +1,12 @@
 from secrets import token_hex
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
-from django.template.loader import get_template
 from django.contrib.sites.models import Site
 from django.shortcuts import reverse
+from activation.models import AVAILABILITY_UNIT, AVAILABILITY_VALUE, AVAILABILITY
 from django.utils import timezone
-from activation.models import AVAILABILITY_UNIT,AVAILABILITY_VALUE, AVAILABILITY
+from django.template.loader import get_template
 
-# domain = Site.objects.get_current().domain
 
 def send_activation_email(activation):
     user = activation.user
@@ -35,6 +34,7 @@ def send_activation_email(activation):
     )
     mail.content_subtype = 'html'
     mail.send()
+
 
 def regenerate_activation(activation):
     activation.token = token_hex(16)

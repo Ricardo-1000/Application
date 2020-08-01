@@ -3,7 +3,7 @@ from django import forms
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
-from django.utils.translation import gettext, gettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from users.models import MyUser
 from activation.signals import set_inactive_user
 from django.conf import settings

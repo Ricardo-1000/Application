@@ -11,12 +11,19 @@
 {% for item in rooms_type_list_view %}
 
 {{ item.name }}
+<br/>
 {{ item.bed_count }}
+<br/>
 {{ item.bed_type }}
+<br/>
 {{ item.bathroom_count }}
+<br/>
 {{ item.bathroom_type }}
+<br/>
 {{ item.property }}
+<br/>
 {% if item.icon_image %}
+<br/>
 <img src="{{ MEDIA_URL }}{{ item.icon_image }}">
 {% endif %}
 <br><hr>

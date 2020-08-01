@@ -2,8 +2,8 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 
-AVAILABILITY_UNIT = 'hours'
-AVAILABILITY_VALUE = 24
+AVAILABILITY_UNIT = 'minutes'
+AVAILABILITY_VALUE = 30
 AVAILABILITY = {AVAILABILITY_UNIT: AVAILABILITY_VALUE}
 
 

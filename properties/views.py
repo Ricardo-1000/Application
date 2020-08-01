@@ -9,42 +9,42 @@ from properties.models import Booking
 
 
 def property_view(request):
-    property_list = Property.objects.all()
+    property_list = Property()
 
     context = {'property_list_view': property_list}
     return render(request, 'properties/property.html', context)
 
 
 def room_view(request):
-    room_list = Room.objects.all()
+    room_list = Room()
 
     context = {'room_list_view': room_list}
     return render(request, 'properties/room.html', context)
 
 
 def rooms_type_view(request):
-    rooms_type_list = RoomsType.objects.all()
+    rooms_type_list = RoomsType()
 
     context = {'rooms_type_list_view': rooms_type_list}
     return render(request, 'properties/rooms_type.html', context)
 
 
 def address_view(request):
-    address_list = Address.objects.all()
+    address_list = Address()
 
     context = {'address_view': address_list}
     return render(request, 'properties/address.html', context)
 
 
 def reviews_view(request):
-    reviews_list = Reviews.objects.all()
+    reviews_list = Reviews()
 
     context = {'reviews_view': reviews_list}
     return render(request, 'properties/reviews.html', context)
 
 
 def booking_view(request):
-    booking_list = Booking.objects.all()
+    booking_list = Booking()
 
     context = {'booking_view': booking_list}
     return render(request, 'properties/booking.html', context)

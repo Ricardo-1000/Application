@@ -12,15 +12,18 @@
 {% for item in property_list_view %}
 
 {{ item.name }}
+<br/>
 {{ item.description }}
+<br/>
 {% if item.image %}
 <img src="{{ MEDIA_URL }}{{ item.image }}">
 {% endif %}
+<br/>
 {{ item.user_id }}
 {{ item.created }}
 {{ item.status }}
 
-
+<br/><br/><br/><hr>
 {% endfor %}
 </body>
 </html>

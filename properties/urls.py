@@ -16,4 +16,3 @@ urlpatterns = [path('', view=property_view, name='properties'),
                path('booking/', view=booking_view, name='booking'),
                path('reviews/', view=reviews_view, name='reviews'),
                ]
-
